@@ -33,7 +33,10 @@ ETL_Project/Transformed CSVs
 #  before PyInstaller builds the exe, so as to inject date/other infos into it.
 *.manifest
 *.spec
+
+#Specified by Robert
 secret.py
+Resources/ALL_STATES.csv
 
 # Installer logs
 pip-log.txt
