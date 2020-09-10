@@ -3,12 +3,12 @@ DROP TABLE IF EXISTS baby_names;
 
 -- Create Table
 CREATE TABLE baby_names (
- 	id int unique,
+ 	id  serial  primary key ,
 	state text,
-	sex varchar(1),
-	year int,
+	Sex text,
+	year bigint,
 	name text,
-	number int,
+	number bigint
 );
 
 select * from baby_names;
