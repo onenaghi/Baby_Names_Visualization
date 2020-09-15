@@ -1,8 +1,8 @@
 // from data.js
-var data = d3.csv("./ALL_STATES.csv", function(data) {
-    console.log(data);
+var data = d3.csv("./ALL_STATES.csv", function (data) {
+  console.log(data);
 
-  });
+});
 var tableData = data;
 
 // get table references
@@ -14,7 +14,7 @@ function buildTable(data) {
 
   // Next, loop through each object in the data
   // and append a row and cells for each value in the row
-  Object.values(data).forEach((dataRow) => {
+  data.forEach((dataRow) => {
     // Append a row to the table body
     var row = tbody.append("tr");
 
