@@ -1,10 +1,12 @@
 // from data.js
-var data = d3.csv("./ALL_STATES.csv", function (data) {
-  console.log(data);
+// function buildtable() {
+  
+ d3.csv("ALL_STATES.csv", function(data) {
+ 
 
-});
-var tableData = data;
+console.log(data);
 
+var tableData= data
 // get table references
 var tbody = d3.select("tbody");
 
@@ -14,7 +16,7 @@ function buildTable(data) {
 
   // Next, loop through each object in the data
   // and append a row and cells for each value in the row
-  data.forEach((dataRow) => {
+  Object.values(data).forEach((dataRow) => {
     // Append a row to the table body
     var row = tbody.append("tr");
 
@@ -27,6 +29,7 @@ function buildTable(data) {
   });
 }
 
+ 
 // Keep Track of all filters
 var filters = {};
 
@@ -71,3 +74,4 @@ d3.selectAll(".filter").on("change", updateFilters);
 
 // Build the table when the page loads
 buildTable(tableData);
+})
